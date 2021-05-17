@@ -10,6 +10,6 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
-        FIRE_Transform.RotateAround(ICE_Transform.position ,Vector3.back, RotateSpeed * Time.deltaTime);
+        ICE_Transform.RotateAround(FIRE_Transform.position ,Vector3.back, RotateSpeed * Time.deltaTime);
     }
 }
