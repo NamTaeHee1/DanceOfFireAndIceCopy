@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 1303610630}
   - component: {fileID: 1303610629}
   m_Layer: 0
-  m_Name: Plyaer
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -458,9 +458,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ICE_Transform: {fileID: 402623219}
   FIRE_Transform: {fileID: 686606991}
+  CurrentRotatePlanetTransform: {fileID: 0}
   ICE_GameObject: {fileID: 402623217}
   FIRE_GameObejct: {fileID: 686606989}
   RotateSpeed: 300
+  RotateDirection: {x: 0, y: 0}
 --- !u!4 &1303610630
 Transform:
   m_ObjectHideFlags: 0

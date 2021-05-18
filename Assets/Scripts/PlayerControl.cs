@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    [SerializeField] private Transform ICE_Transform, FIRE_Transform;
+    [SerializeField] private Transform ICE_Transform, FIRE_Transform, CurrentRotatePlanetTransform;
     [SerializeField] private GameObject ICE_GameObject, FIRE_GameObejct;
     [SerializeField] private float RotateSpeed = 3.0f;
     [SerializeField] private Vector2 RotateDirection = Vector3.back;
@@ -14,11 +14,12 @@ public class PlayerControl : MonoBehaviour
     {
         MovePlanet();
         RotatePlanet();
+        ShowOrbit();
     }
 
     void RotatePlanet()
     {
-        ICE_Transform.RotateAround(FIRE_Transform.position, Vector3.back, RotateSpeed * Time.deltaTime);
+        CurrentRotatePlanetTransform.RotateAround(FIRE_Transform.position, RotateDirection, RotateSpeed * Time.deltaTime);
     }
 
     void MovePlanet()
@@ -31,6 +32,6 @@ public class PlayerControl : MonoBehaviour
 
     void ShowOrbit()
     {
-        if()
+
     }
 }
