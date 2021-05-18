@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    [SerializeField] private Transform ICE_Transform, FIRE_Transform, CurrentRotatePlanetTransform;
+    [SerializeField] private Transform ICE_Transform, FIRE_Transform;
+    private Transform CurrentRotatePlanetTransform, DifferentPlanetTransform;
     [SerializeField] private GameObject ICE_GameObject, FIRE_GameObejct;
+    [SerializeField] private Sprite RedOrbit, BlueOrbit;
     [SerializeField] private float RotateSpeed = 3.0f;
-    [SerializeField] private Vector2 RotateDirection = Vector3.back;
+    [SerializeField] private Vector3 RotateDirection = Vector3.back;
 
+    private void Awake()
+    {
+        CurrentRotatePlanetTransform = ICE_Transform;
+        ICE_GameObject.tag = "AroundPlanet";
+        DifferentPlanetTransform = FIRE_Transform;
+    }
 
     void Update()
     {
@@ -19,7 +27,7 @@ public class PlayerControl : MonoBehaviour
 
     void RotatePlanet()
     {
-        CurrentRotatePlanetTransform.RotateAround(FIRE_Transform.position, RotateDirection, RotateSpeed * Time.deltaTime);
+        CurrentRotatePlanetTransform.RotateAround(DifferentPlanetTransform.position, RotateDirection, RotateSpeed * Time.deltaTime);
     }
 
     void MovePlanet()
