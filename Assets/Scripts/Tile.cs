@@ -12,6 +12,7 @@ public class Tile : MonoBehaviour
         if (collision.gameObject.CompareTag("AroundPlanet") && !isCollision)
         {
             isCollision = true;
+            FindObjectOfType<PlayerControl>().CurrentRotatePlanetTransform.position = 
         }
     }
 }

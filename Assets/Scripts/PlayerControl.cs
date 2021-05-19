@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     [SerializeField] private Transform ICE_Transform, FIRE_Transform;
-    private Transform CurrentRotatePlanetTransform, DifferentPlanetTransform;
+    public Transform CurrentRotatePlanetTransform, DifferentPlanetTransform;
     [SerializeField] private GameObject ICE_GameObject, FIRE_GameObejct;
     [SerializeField] private Sprite RedOrbit, BlueOrbit;
     [SerializeField] private float RotateSpeed = 3.0f;
