@@ -22,7 +22,6 @@ public class PlayerControl : MonoBehaviour
     {
         MovePlanet();
         RotatePlanet();
-        ShowOrbit();
     }
 
     void RotatePlanet()
