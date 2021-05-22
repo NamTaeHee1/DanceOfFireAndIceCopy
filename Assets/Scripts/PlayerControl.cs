@@ -33,7 +33,9 @@ public class PlayerControl : MonoBehaviour
     {
         if(Input.anyKeyDown && !Input.GetKeyDown(KeyCode.Escape))
         {
-
+            Transform Temp = CurrentRotatePlanetTransform;
+            CurrentRotatePlanetTransform = DifferentPlanetTransform;
+            DifferentPlanetTransform = Temp;
         }
     }
 
